@@ -2,9 +2,10 @@ import random
 import time
 import threading
 import telebot
+import os
 from telebot import types
 from collections import defaultdict
-import os
+from dotenv import load_dotenv
 
 # Configuration
 TOKEN = os.getenv('TOKEN')
