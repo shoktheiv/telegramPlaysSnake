@@ -6,7 +6,7 @@ from telebot import types
 from collections import defaultdict
 
 # Configuration
-TOKEN = 'nice try' 
+TOKEN = os.getenv('TOKEN')
 CHANNEL_ID = -1002565479044 
 
 
