@@ -4,6 +4,7 @@ import threading
 import telebot
 from telebot import types
 from collections import defaultdict
+import os
 
 # Configuration
 TOKEN = os.getenv('TOKEN')
