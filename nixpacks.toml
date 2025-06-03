@@ -8,4 +8,4 @@ commands = [
 ]
 
 [start]
-cmd = "python main.py"
+cmd = "python index.py"
