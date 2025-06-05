@@ -7,7 +7,7 @@ from telebot import types
 from collections import defaultdict
 from dotenv import load_dotenv
 
-TOKEN = os.get_env("TOKEN")
+TOKEN = os.getenv("TOKEN")
 CHANNEL_ID = -1002565479044 
 
 bot = telebot.TeleBot(TOKEN)
