@@ -190,7 +190,7 @@ class ChannelSnakeGame:
         if not self.active:
             return
         
-        self.timer = threading.Timer(5, self.execute_move)
+        self.timer = threading.Timer(3600, self.execute_move)
         self.timer.start()
     
     def execute_move(self):
