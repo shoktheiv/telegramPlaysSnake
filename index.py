@@ -61,19 +61,19 @@ class ChannelSnakeGame:
         dx, dy = self.direction
         new_head = ((head_x + dx) % self.width, (head_y + dy) % self.height)
         
+        tail = self.snake[-1]
         self.snake.insert(0, new_head)
-        
+
+        if new_head in self.snake[1:-1] or (new_head == tail and new_head == self.food):
+            self.game_over = True
+            return False
+
         if new_head == self.food:
             self.score += 1
             self.food = self.new_food()
         else:
             self.snake.pop()
-        
-        if new_head in self.snake:
-            self.game_over = True
-            return False
-        
-        return True
+            return True
     
     def get_board(self):
         board = []
@@ -190,7 +190,7 @@ class ChannelSnakeGame:
         if not self.active:
             return
         
-        self.timer = threading.Timer(3600, self.execute_move)
+        self.timer = threading.Timer(5, self.execute_move)
         self.timer.start()
     
     def execute_move(self):
